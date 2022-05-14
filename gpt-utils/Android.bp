@@ -14,7 +14,6 @@
 // limitations under the License.
 //
 
-
 cc_library {
     name: "libgptutils.oneplus_lito",
     vendor: true,
@@ -27,13 +26,15 @@ cc_library {
     cflags: [
         "-Wall",
         "-Werror",
+        "-Wno-unused-parameter",
+        "-D_GENERIC_KERNEL_HEADERS",
     ],
     srcs: [
         "gpt-utils.cpp",
     ],
     owner: "qti",
     header_libs: [
-        "generated_kernel_headers",
+        "device_kernel_headers",
     ],
     export_include_dirs: ["."],
 }
