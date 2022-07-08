@@ -62,3 +62,7 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_PACKAGES += \
     fastbootd \
     android.hardware.fastboot@1.0-impl-mock
+
+# Soong Namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH)
